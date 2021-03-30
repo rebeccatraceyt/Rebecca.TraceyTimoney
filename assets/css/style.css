@@ -1,13 +1,31 @@
+/*------------------------------------------------------- Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
+
+/*------------------------------------------------------- Root Variables */
+
 :root {
+    /* Colour Variables */
     --blue: #0E8397;
     --purple: #6A648A;
     --grey-purple: #797B94;
     --honeydew: #DDF2EB;
+
+    /* Font variables */ 
+    --header: 'Homemade Apple', cursive;
+}
+
+/*------------------------------------------------------- Special Styling */
+h1 {
+    font-family: var(--header);
+    font-size: 2.5rem;
 }
 
 #landing-sec {
     width: 100vw;
     height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     background-image: url(../images/fullpage-bg.png);
     background-attachment: scroll; /* To allow on ios devices */
@@ -16,6 +34,10 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-repeat: no-repeat;
+}
+#landing-title {
+    max-width: 100vw;
+    text-align: center;
 }
 
 #about-sec {
@@ -36,5 +58,5 @@
     width: 100vw;
     height: 100vh;
 
-    background: var(--grey-purple) no-repeat right top; 
+    background: var(--blue) no-repeat right top; 
 }
