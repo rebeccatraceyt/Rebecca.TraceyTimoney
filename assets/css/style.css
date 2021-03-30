@@ -1,0 +1,40 @@
+:root {
+    --blue: #0E8397;
+    --purple: #6A648A;
+    --grey-purple: #797B94;
+    --honeydew: #DDF2EB;
+}
+
+#landing-sec {
+    width: 100vw;
+    height: 100vh;
+
+    background-image: url(../images/fullpage-bg.png);
+    background-attachment: scroll; /* To allow on ios devices */
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#about-sec {
+    width: 100vw;
+    height: 100vh;
+
+    background: var(--grey-purple) no-repeat right top; 
+}
+
+#project-sec {
+    width: 100vw;
+    height: 100vh;
+
+    background: var(--purple) no-repeat right top; 
+}
+
+#contact-sec {
+    width: 100vw;
+    height: 100vh;
+
+    background: var(--grey-purple) no-repeat right top; 
+}
