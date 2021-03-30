@@ -23,34 +23,43 @@
     <body>
 
          <!-- Logo -->
-        <div class="navbar-logo">
-            <a  href="index.html" aria-label="Kryan Logo linking to Homepage">
-                <img src="assets/images/logo.png" width="200" height="70" alt="Click to return home" >
-            </a>
-        </div>
 
         <!-- navbar -->
-        <nav class="navbar navbar-expand-lg scroll-nav" aria-label="Navigation Bar">
-            <div class="container-fluid">
+        <nav class="navbar">
+            
 
+            <div class="container-fluid scroll-nav navbar-expand-lg">
+
+                <a class="navbar-brand" href="#landing-sec" aria-label="Logo linking to Homepage">
+                <img src="assets/images/logo.png" width="100" height="75" alt="Click to return home">
+            </a>
                 <!--  toggler button  -->
                 <button class="navbar-toggler ml-auto custom-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <!--  nav links  -->
-                <div class="collapse navbar-collapse nav-padding" id="navbarMenu">
+                <div class="collapse navbar-collapse justify-content-end" id="navbarMenu">
                     <ul class="nav navbar-nav scroll-nav ml-auto"> 
                         <li class="nav-item hvr-grow"><a class="nav-link" href="#about-sec" aria-label="Bio Page">About</a></li>
                         <li class="nav-item hvr-grow"><a class="nav-link" href="#project-sec" aria-label="Live Page">Projects</a></li>
                         <li class="nav-item hvr-grow"><a class="nav-link" href="#contact-sec" aria-label="Press Kit">Contact</a></li>
-                        <li class="nav-item hvr-grow"><a class="nav-link" href="https://github.com/rebeccatraceyt" target="_blank" rel="noopener" aria-label="Rebecca Tracey-Timoney GitHub Account"><i class="fab fa-github-square"></i></a></li>
-                        <li class="nav-item hvr-grow"><a class="nav-link" href="https://www.linkedin.com/in/rebeccatraceytimoney/" target="_blank" rel="noopener" aria-label="Rebecca Tracey-Timoney LinkedIn Account"><i class="fab fa-linkedin"></i></a></li>
-                        <li class="nav-item hvr-grow"><a class="nav-link" href="https://twitter.com/DexterAtHeart" target="_blank" rel="noopener" aria-label="Rebecca Tracey-Timoney Twitter Account"><i class="fab fa-twitter"></i></a></li>
+                        <li class="nav-item hvr-grow"><a class="nav-link d-none d-lg-block" href="https://github.com/rebeccatraceyt" target="_blank" rel="noopener" aria-label="Rebecca Tracey-Timoney GitHub Account"><i class="fab fa-github-square"></i></a></li>
+                        <li class="nav-item hvr-grow"><a class="nav-link d-none d-lg-block" href="https://www.linkedin.com/in/rebeccatraceytimoney/" target="_blank" rel="noopener" aria-label="Rebecca Tracey-Timoney LinkedIn Account"><i class="fab fa-linkedin"></i></a></li>
+                        <li class="nav-item hvr-grow"><a class="nav-link d-none d-lg-block" href="https://twitter.com/DexterAtHeart" target="_blank" rel="noopener" aria-label="Rebecca Tracey-Timoney Twitter Account"><i class="fab fa-twitter"></i></a></li>
+                        <li class="nav-item text-center d-inline d-none d-sm-block d-lg-none">
+                            <ul class="socials-nav">
+                                <li class="list-inline-item"><a href="https://github.com/rebeccatraceyt" target="_blank" rel="noopener" aria-label="Rebecca Tracey-Timoney GitHub Account"><i class="fab fa-github-square"></i></a></li>
+                                <li class="list-inline-item"><a href="https://www.linkedin.com/in/rebeccatraceytimoney/" target="_blank" rel="noopener" aria-label="Rebecca Tracey-Timoney LinkedIn Account"><i class="fab fa-linkedin"></i></a></li>
+                                <li class="list-inline-item"><a href="https://twitter.com/DexterAtHeart" target="_blank" rel="noopener" aria-label="Rebecca Tracey-Timoney Twitter Account"><i class="fab fa-twitter"></i></a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>
+
         </nav>
+
         <!-- first section - landing -->
         <section id="landing-sec">
             <div id="landing-title">

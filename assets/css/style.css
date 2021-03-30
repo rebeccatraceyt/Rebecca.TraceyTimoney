@@ -5,10 +5,11 @@
 
 :root {
     /* Colour Variables */
-    --blue: #0E8397;
+    --blue: #008097;
     --purple: #6A648A;
     --grey-purple: #797B94;
-    --honeydew: #DDF2EB;
+    --cream: #A5BCBB;
+    --navy: #061225;
 
     /* Font variables */ 
     --header: 'Homemade Apple', cursive;
@@ -18,37 +19,21 @@
 h1 {
     font-family: var(--header);
     font-size: 2.5rem;
+    color: var(--navy);
 }
 
 /*------------------------------------------------------- Navbar */
 /* Styling for navigation bar */
 .navbar{
-    background-color: var(--nav-dark);
     width: 100vw;
-    margin-bottom: 0;
-    border: 0;
-    
-    right: 0;
     position: fixed;
     z-index: 100;
-    padding: 10px;
+
 }
 
-/* Styling for logo */
-.navbar-logo {
-    padding: 10px 0px 0px 10px;
-    margin-bottom: 0;
-    border: 0;
-    position: fixed;
-    width: 50vw;
-    left: 0;
-    z-index: 101;
-}
 
 /* Styling for nav links in navigation bar */
 .navbar-nav{
-    background-color: var(--nav-dark);
-    padding: 10px;
     border-radius: 15px;
     z-index: 100;
 }
@@ -56,7 +41,7 @@ h1 {
     font-family: var(--titlefont);
     font-weight: 400;
     text-align: center;
-    color: var(--accent); 
+    color: var(--navy); 
     font-size: 1.25em; 
     line-height: 130%;
     /* Bug that was found on 30/11 with solution sourced from Stack Overflow. Detailed report in the 'Bugs' section of README file*/
@@ -67,6 +52,30 @@ h1 {
 .nav-padding {
     padding-top: 30px;
     /* Needed for toggler navbar on mobile devices */
+}
+
+/* Social Links appear in the nav bar header on smaller screens*/
+.socials-nav {
+    color: var(--navy); 
+    padding: 0px;
+    margin: 0px auto;
+    /* Bug that was found on 09/12 with solution sourced from Stack Overflow. Detailed report in the 'Bugs' section of README file*/
+}
+
+/* Styling for navbar toggler */
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(173, 20, 20)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    /* Sourced from Stack Overflow to re-colour the toggle button on mobile devices (RGB value had to be entered instead of root varable).
+    https://stackoverflow.com/questions/42586729/bootstrap-4-change-hamburger-toggler-color*/
+} 
+.custom-toggler{
+    border-color: var(--navy);
+}
+.custom-toggler:active {
+    border: none;
+} 
+.navbar-toggler {
+    margin: 12px 12px 12px 0px;
 }
 
 #landing-sec {
