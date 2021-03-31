@@ -6,9 +6,9 @@
 :root {
     /* Colour Variables */
     --blue: #008097;
-    --purple: #6A648A;
+    --purple: rgb(106, 100, 138);
     --grey-purple: #797B94;
-    --nav-bg: hsla(249, 16%, 47%, 0.863);
+    --nav-bg: rgba(106, 101, 139, 0.863);
     --cream: #A5BCBB;
     --navy: #061225;
 
@@ -37,7 +37,6 @@ h1 {
     transform: translateZ(0);
     z-index: -1;
 }
-
 .bg-overlay:after {
     content: '';
     position: absolute;
@@ -82,7 +81,6 @@ h1 {
     text-align: center;
     color: var(--navy); 
     font-size: 1.25em; 
-
 }
 
 /* Social Links appear in the nav bar header on smaller screens*/
@@ -95,7 +93,7 @@ h1 {
 
 /* Styling for navbar toggler */
 .custom-toggler .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(173, 20, 20)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(106, 100, 138)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
     /* Sourced from Stack Overflow to re-colour the toggle button on mobile devices (RGB value had to be entered instead of root varable).
     https://stackoverflow.com/questions/42586729/bootstrap-4-change-hamburger-toggler-color*/
 } 
