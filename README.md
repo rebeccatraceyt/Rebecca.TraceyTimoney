@@ -182,6 +182,8 @@ Low-Fidelity Wireframe mockups were created in [Balsamiq](https://balsamiq.com/ 
      - jQuery Validation was used to simplify form validation for the **Suggestions Form**.
 - [SweetAlert2](https://sweetalert2.github.io/ "Link to Sweet Alert 2 page")
      - SweetAlert2 was used to customise the **Suggestions Form** success message for UX purposes.
+- [Animate on Scroll](https://michalsnik.github.io/aos/ "Link to Animate on Scroll page")
+     - Animate on Scroll was used for scroll effects forr UI purposes.
 - [Figma](https://www.figma.com/ "Link to Figma homepage")
      - Figma was used to create the wireframes during the design phase of the project.
 - [Am I Responsive?](http://ami.responsivedesign.is/# "Link to Am I Responsive Homepage")

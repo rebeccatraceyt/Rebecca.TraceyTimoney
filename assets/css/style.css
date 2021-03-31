@@ -28,6 +28,32 @@ h1 {
     color: var(--navy);
 }
 
+/* Page Overlay */
+.page-bg {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    z-index: -1;
+}
+
+.bg-overlay:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-image: url(../images/fullpage-bg.png);
+    background-attachment: scroll; /* To allow on ios devices */
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-repeat: no-repeat;
+}
+
 /*------------------------------------------------------- Navbar */
 /* Styling for navigation bar */
 .navbar{
