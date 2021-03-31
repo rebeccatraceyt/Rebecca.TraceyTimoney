@@ -1,5 +1,5 @@
 /*------------------------------------------------------- Font Import */
-@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Lato:wght@400;700&display=swap');
 
 /*------------------------------------------------------- Root Variables */
 
@@ -8,16 +8,22 @@
     --blue: #008097;
     --purple: #6A648A;
     --grey-purple: #797B94;
+    --nav-bg: hsla(249, 16%, 47%, 0.863);
     --cream: #A5BCBB;
     --navy: #061225;
 
     /* Font variables */ 
-    --header: 'Homemade Apple', cursive;
+    --header-font: 'Homemade Apple', cursive;
+    --main-font: 'Lato', sans-serif;
 }
 
 /*------------------------------------------------------- Special Styling */
+html {
+  scroll-behavior: smooth;
+}
+
 h1 {
-    font-family: var(--header);
+    font-family: var(--header-font);
     font-size: 2.5rem;
     color: var(--navy);
 }
@@ -28,30 +34,29 @@ h1 {
     width: 100vw;
     position: fixed;
     z-index: 100;
-
 }
-
-
 /* Styling for nav links in navigation bar */
 .navbar-nav{
-    border-radius: 15px;
+    font-family: var(--main-font);
     z-index: 100;
 }
+.nav-bg {
+    background: var(--nav-bg);
+    border-radius: 10%;
+    padding: 5px;
+}
+.navbar-brand {
+    width: 30%;
+}
+.navbar-brand img {
+    width: 100%;
+    height: auto;
+}
 .navbar-nav li a {
-    font-family: var(--titlefont);
-    font-weight: 400;
     text-align: center;
     color: var(--navy); 
     font-size: 1.25em; 
-    line-height: 130%;
-    /* Bug that was found on 30/11 with solution sourced from Stack Overflow. Detailed report in the 'Bugs' section of README file*/
-}
-.navbar-nav .active{
-    color: var(--colour2);
-}
-.nav-padding {
-    padding-top: 30px;
-    /* Needed for toggler navbar on mobile devices */
+
 }
 
 /* Social Links appear in the nav bar header on smaller screens*/
@@ -59,7 +64,7 @@ h1 {
     color: var(--navy); 
     padding: 0px;
     margin: 0px auto;
-    /* Bug that was found on 09/12 with solution sourced from Stack Overflow. Detailed report in the 'Bugs' section of README file*/
+    font-size: 1.3rem;
 }
 
 /* Styling for navbar toggler */
@@ -84,14 +89,6 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-
-    background-image: url(../images/fullpage-bg.png);
-    background-attachment: scroll; /* To allow on ios devices */
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-repeat: no-repeat;
 }
 #landing-title {
     max-width: 100vw;
@@ -101,20 +98,14 @@ h1 {
 #about-sec {
     width: 100vw;
     height: 100vh;
-
-    background: var(--grey-purple) no-repeat right top; 
 }
 
 #project-sec {
     width: 100vw;
     height: 100vh;
-
-    background: var(--purple) no-repeat right top; 
 }
 
 #contact-sec {
     width: 100vw;
     height: 100vh;
-
-    background: var(--blue) no-repeat right top; 
 }
