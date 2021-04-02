@@ -18,8 +18,17 @@
 }
 
 /*------------------------------------------------------- Special Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
+}
+body {
+    font-family: var(--main-font);
+    transition: all 200ms linear;
 }
 
 h1 {
@@ -54,13 +63,228 @@ h1 {
 }
 
 /*------------------------------------------------------- Navbar */
+.cd-header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.header-wrapper {
+    position: relative;
+    width: calc(100% - 100px);
+    margin-left: 50px;
+}
+
+
+.nav-but-wrap {
+    position: relative;
+    padding-left: 105px;
+    padding-top: 15px;
+    margin-top: 26px;
+    transition: all 0.3s ease-out;
+}
+
+.menu-icon {
+    height: 30px;
+    width: 30px;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+    display: block;
+}
+
+.menu-icon__line {
+    height: 2px;
+    width: 30px;
+    display: block;
+    background-color: #111;
+    margin-bottom: 7px;
+    cursor: pointer;
+    transition: background-color .5s ease;
+    transition: transform .2s ease, background-color .5s ease;
+}
+
+.nav:before,
+.nav:after {
+    content: "";
+    position: fixed;
+    top: 20px;
+    left: 50px;
+    width: 0;
+    height: 0;
+    background-color: rgba(20, 21, 26, 0.6);
+    border-bottom-right-radius: 200%;
+    z-index: -1;
+    transition: border-radius linear 0.8s,
+        width cubic-bezier(0.77, 0, 0.175, 1) 0.6s,
+        height cubic-bezier(0.77, 0, 0.175, 1) 0.6s;
+}
+
+.nav:after {
+    background-color: rgba(9, 9, 12, 1);
+    transition-delay: 0s;
+    box-shadow: 6px 7px 28px 0 rgba(16, 16, 16, 0.3);}
+
+.nav__content {
+    position: fixed;
+    top: 90px;
+    left: 50px;
+    width: 280px;
+    text-align: left;
+}
+
+.nav__list {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    z-index: 2;
+}
+
+.nav__list-item {
+    position: relative;
+    display: block;
+    transition-delay: 0.8s;
+    opacity: 0;
+    text-align: left;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    line-height: 1.2;
+    letter-spacing: 2px;
+    transform: translate(30px, 0%);
+    transition: opacity .2s ease, transform .2s ease;
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+
+.nav__list-item a {
+    position: relative;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.6);
+    overflow: hidden;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    z-index: 2;
+    padding-left: 40px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: inline-block;
+    transition: all 200ms linear;
+}
+
+.nav__list-item a:after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 0;
+    width: 5px;
+    height: 0;
+    opacity: 0;
+    background-color: yellow;
+    z-index: 1;
+    transition: all 200ms linear;
+}
+
+.nav__list-item a:hover:after {
+    height: 100%;
+    opacity: 1;
+    top: 0;
+}
+
+.nav__list-item a:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+.nav__list-item.active-nav a {
+    color: rgba(255, 255, 255, 1);
+}
+
+.nav__list-item.active-nav a:after {
+    height: 100%;
+    opacity: 1;
+    top: 0;
+}
+
+
+body.nav-active .menu-icon__line {
+    background-color: #fff;
+    transform: translate(0px, 0px) rotate(-45deg);
+}
+
+body.nav-active .menu-icon__line-left {
+    width: 15px;
+    transform: translate(2px, 4px) rotate(45deg);
+}
+
+body.nav-active .menu-icon__line-right {
+    width: 15px;
+    float: right;
+    transform: translate(-3px, -3.5px) rotate(45deg);
+}
+
+body.nav-active .menu-icon:hover .menu-icon__line-left,
+body.nav-active .menu-icon:hover .menu-icon__line-right {
+    width: 15px;
+}
+
+
+body.nav-active .nav:before,
+body.nav-active .nav:after {
+    width: 250px;
+    height: 350px;
+    border-radius: 15px;
+}
+
+body.nav-active .nav:after {
+    transition-delay: .1s;
+}
+
+body.nav-active .nav:before {
+    transition-delay: 0s;
+}
+
+body.nav-active .nav__list-item {
+    opacity: 1;
+    transform: translateX(0%);
+}
+
+body.nav-active .nav__list-item:nth-child(0) {
+    transition-delay: 0.7s;
+}
+
+body.nav-active .nav__list-item:nth-child(1) {
+    transition-delay: 0.8s;
+}
+
+body.nav-active .nav__list-item:nth-child(2) {
+    transition-delay: 0.9s;
+}
+
+body.nav-active .nav__list-item:nth-child(3) {
+    transition-delay: 1s;
+}
+
+body.nav-active .nav__list-item:nth-child(4) {
+    transition-delay: 1.1s;
+}
+
+body.nav-active .nav__list-item:nth-child(5) {
+    transition-delay: 1.2s;
+}
+
+
+
+
 /* Styling for navigation bar */
-.navbar{
+/* .navbar{
     width: 100vw;
     position: fixed;
     z-index: 100;
 }
-/* Styling for nav links in navigation bar */
+/* Styling for nav links in navigation bar 
 .navbar-nav{
     font-family: var(--main-font);
     z-index: 100;
@@ -83,7 +307,7 @@ h1 {
     font-size: 1.25em; 
 }
 
-/* Social Links appear in the nav bar header on smaller screens*/
+/* Social Links appear in the nav bar header on smaller screens
 .socials-nav {
     color: var(--navy); 
     padding: 0px;
@@ -91,11 +315,11 @@ h1 {
     font-size: 1.3rem;
 }
 
-/* Styling for navbar toggler */
+/* Styling for navbar toggler 
 .custom-toggler .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(106, 100, 138)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
     /* Sourced from Stack Overflow to re-colour the toggle button on mobile devices (RGB value had to be entered instead of root varable).
-    https://stackoverflow.com/questions/42586729/bootstrap-4-change-hamburger-toggler-color*/
+    https://stackoverflow.com/questions/42586729/bootstrap-4-change-hamburger-toggler-color
 } 
 .custom-toggler{
     border-color: var(--navy);
@@ -105,8 +329,9 @@ h1 {
 } 
 .navbar-toggler {
     margin: 12px 12px 12px 0px;
-}
+} */
 
+/*------------------------------------------------------- Landing Section */
 #landing-sec {
     width: 100vw;
     height: 100vh;
@@ -119,17 +344,31 @@ h1 {
     text-align: center;
 }
 
+/*------------------------------------------------------- About Section */
 #about-sec {
     width: 100vw;
     height: 100vh;
 }
 
+/*------------------------------------------------------- Projects Section */
 #project-sec {
     width: 100vw;
     height: 100vh;
 }
 
+/*------------------------------------------------------- Contact Section */
 #contact-sec {
     width: 100vw;
     height: 100vh;
+}
+
+/*------------------------------------------------------- Media Queries */
+/* Breakpoint to maintain structural integrity on a Tablet device */
+@media (min-width: 700px) and (max-width: 991px) {
+
+}
+
+/* Breakpoint to maintain structural integrity on a Laptop Screen */
+@media (min-width: 991px){ 
+
 }
