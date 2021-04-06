@@ -1,23 +1,32 @@
+// --------------------------------------------------------- Variables
+
 // --------------------------------------------------------- NavBar
-var app = (function () {
-    var body = undefined;
-    var menu = undefined;
-    var menuItems = undefined;
-    var init = function init() {
-        body = document.querySelector("body");
-        menu = document.querySelector(".menu-icon");
-        menuItems = document.querySelectorAll(".nav__list-item");
-        applyListeners();
-    };
-    var applyListeners = function applyListeners() {
-        menu.addEventListener("click", function () {
-            return toggleClass(body, "nav-active");
-        });
-    };
-    var toggleClass = function toggleClass(element, stringClass) {
-        if (element.classList.contains(stringClass))
-            element.classList.remove(stringClass);
-        else element.classList.add(stringClass);
-    };
-    init();
-})();
+
+$("#nav-btn").click(function () {
+    $(this).toggleClass("animate");
+        if ($(this).hasClass("animate")) {
+            $("#nav-menu").addClass("animate");
+        } else {
+            $("#nav-menu").removeClass("animate");
+        }
+});
+
+// sourced from http://jsfiddle.net/MCka4/
+$("nav a").click(function () {
+  $("#nav-btn").removeClass("animate");
+  $("#nav-menu").removeClass("animate");
+  $("#nav-menu a.active").removeClass("active");
+  $(this).addClass("active");
+});
+
+$(window).scroll(function () {
+  var href = $(this).scrollTop();
+  $(".nav-link").each(function (event) {
+    if (href >= $($(this).attr("href")).offset().top - 1) {
+      $("#nav-menu a.active").removeClass("active");
+      $(this).addClass("active");
+    }
+  });
+});
+
+

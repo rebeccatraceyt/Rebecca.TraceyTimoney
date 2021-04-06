@@ -22,91 +22,40 @@
         <title>Rebecca Tracey-Timoney</title>
     </head>
     <body>
+
+        <!-- <section id="page-bg bg-overlay"></section> -->
+
+        
         <!-- navbar -->
-        <!-- source and edited from https://github.com/smthari/Drop-Down-Menu -->
-        <header class="cd-header">
-            <div class="header-wrapper">
-                <div class="nav-but-wrap">
-                    <div class="menu-icon hover-target">
-                        <span class="menu-icon__line menu-icon__line-left"></span>
-                        <span class="menu-icon__line"></span>
-                        <span class="menu-icon__line menu-icon__line-right"></span>
-                    </div>
-                </div>
-            </div>
-        </header>
-
-        <div class="nav">
-            <div class="nav__content">
-                <ul class="nav__list">
-                    <li class="nav__list-item active-nav"><a href="#" class="hover-target">Home</a></li>
-                    <li class="nav__list-item"><a href="#" class="hover-target">Services</a></li>
-                    <li class="nav__list-item"><a href="#" class="hover-target">Blog</a></li>
-                    <li class="nav__list-item"><a href="#" class="hover-target">News</a></li>
-                    <li class="nav__list-item"><a href="#" class="hover-target">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-
-
-
-
-        <!-- <nav class="navbar sticky-top">
-            <a class="navbar-brand" href="#landing-sec" aria-label="Logo linking to Homepage">
+        <!-- source and edited from https://codepen.io/vulchivijay/pen/bEWqdP -->
+        <header>
+			<a href="#home-sec" class="logo" aria-label="Logo linking to Homepage">
                 <img src="assets/images/logo.png" alt="Click to return home">
             </a>
-
-            <toggler button 
-            <span onclick="openNav()">&#9776;</span>
-            
-
-            nav links  
-            <div class="justify-content-end" id="sideNav" class="smNav">
-                <ul class="navbar-nav nav-bg">
-                    <li class="nav-item text-center d-inline d-none d-sm-block d-lg-none"><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></li>
-                    <li class="nav-item hvr-grow"><a class="nav-link" href="#about-sec" aria-label="Bio Page">About</a></li>
-                    <li class="nav-item hvr-grow"><a class="nav-link" href="#project-sec" aria-label="Live Page">Projects</a></li>
-                    <li class="nav-item hvr-grow"><a class="nav-link" href="#contact-sec" aria-label="Press Kit">Contact</a></li>
-                    <li class="nav-item hvr-grow"><a class="nav-link d-none d-lg-block" href="https://github.com/rebeccatraceyt" target="_blank" rel="noopener" aria-label="Rebecca Tracey-Timoney GitHub Account"><i class="fab fa-github-square"></i></a></li>
-                    <li class="nav-item hvr-grow"><a class="nav-link d-none d-lg-block" href="https://www.linkedin.com/in/rebeccatraceytimoney/" target="_blank" rel="noopener" aria-label="Rebecca Tracey-Timoney LinkedIn Account"><i class="fab fa-linkedin"></i></a></li>
-                    <li class="nav-item hvr-grow"><a class="nav-link d-none d-lg-block" href="https://twitter.com/DexterAtHeart" target="_blank" rel="noopener" aria-label="Rebecca Tracey-Timoney Twitter Account"><i class="fab fa-twitter"></i></a></li>
-                    <li class="nav-item text-center d-inline d-none d-sm-block d-lg-none">
-                        <ul class="socials-nav">
-                            <li class="list-inline-item"><a href="https://github.com/rebeccatraceyt" target="_blank" rel="noopener" aria-label="Rebecca Tracey-Timoney GitHub Account"><i class="fab fa-github-square"></i></a></li>
-                            <li class="list-inline-item"><a href="https://www.linkedin.com/in/rebeccatraceytimoney/" target="_blank" rel="noopener" aria-label="Rebecca Tracey-Timoney LinkedIn Account"><i class="fab fa-linkedin"></i></a></li>
-                            <li class="list-inline-item"><a href="https://twitter.com/DexterAtHeart" target="_blank" rel="noopener" aria-label="Rebecca Tracey-Timoney Twitter Account"><i class="fab fa-twitter"></i></a></li>
-                        </ul>
-                    </li>
+			<button id="nav-btn">
+				<span class="lines"></span>
+            </button>
+			<nav id="nav-menu">
+                <ul>
+                    <li><a class="nav-link" href="#home-sec" aria-label="Home Section">Home</a></li>
+                    <li><a class="nav-link" href="#about-sec" aria-label="About Section">About</a></li>
+                    <li><a class="nav-link" href="#project-sec" aria-label="Project Section">Projects</a></li>
+                    <li><a class="nav-link" href="#contact-sec" aria-label="Contact Section">Contact</a></li>
                 </ul>
-            </div>
+			</nav>
+		</header>
 
-            <div id="sidenav" class="smNav">
-            <ul class="navbar-nav nav-bg">
-                    <li class="nav-item text-center d-inline d-none d-sm-block d-lg-none"><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></li>
-                    <li class="nav-item hvr-grow"><a class="nav-link" href="#about-sec" aria-label="Bio Page">About</a></li>
-                    <li class="nav-item hvr-grow"><a class="nav-link" href="#project-sec" aria-label="Live Page">Projects</a></li>
-                    <li class="nav-item hvr-grow"><a class="nav-link" href="#contact-sec" aria-label="Press Kit">Contact</a></li>
-                    <li class="nav-item hvr-grow"><a class="nav-link d-none d-lg-block" href="https://github.com/rebeccatraceyt" target="_blank" rel="noopener" aria-label="Rebecca Tracey-Timoney GitHub Account"><i class="fab fa-github-square"></i></a></li>
-                    <li class="nav-item hvr-grow"><a class="nav-link d-none d-lg-block" href="https://www.linkedin.com/in/rebeccatraceytimoney/" target="_blank" rel="noopener" aria-label="Rebecca Tracey-Timoney LinkedIn Account"><i class="fab fa-linkedin"></i></a></li>
-                    <li class="nav-item hvr-grow"><a class="nav-link d-none d-lg-block" href="https://twitter.com/DexterAtHeart" target="_blank" rel="noopener" aria-label="Rebecca Tracey-Timoney Twitter Account"><i class="fab fa-twitter"></i></a></li>
-                    <li class="nav-item text-center d-inline d-none d-sm-block d-lg-none">
-                        <ul class="socials-nav">
-                            <li class="list-inline-item"><a href="https://github.com/rebeccatraceyt" target="_blank" rel="noopener" aria-label="Rebecca Tracey-Timoney GitHub Account"><i class="fab fa-github-square"></i></a></li>
-                            <li class="list-inline-item"><a href="https://www.linkedin.com/in/rebeccatraceytimoney/" target="_blank" rel="noopener" aria-label="Rebecca Tracey-Timoney LinkedIn Account"><i class="fab fa-linkedin"></i></a></li>
-                            <li class="list-inline-item"><a href="https://twitter.com/DexterAtHeart" target="_blank" rel="noopener" aria-label="Rebecca Tracey-Timoney Twitter Account"><i class="fab fa-twitter"></i></a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </nav> -->
 
-        <div class="page-bg bg-overlay">
-			<div class="aos-init aos-animate" data-aos="fade-in" data-aos-duration="1500" data-aos-anchor=".section--hero"></div>
-		</div>
+        <!-- <ul class="socials-nav">
+            <li class="list-inline-item"><a href="https://github.com/rebeccatraceyt" target="_blank" rel="noopener" aria-label="Rebecca Tracey-Timoney GitHub Account"><i class="fab fa-github-square"></i></a></li>
+            <li class="list-inline-item"><a href="https://www.linkedin.com/in/rebeccatraceytimoney/" target="_blank" rel="noopener" aria-label="Rebecca Tracey-Timoney LinkedIn Account"><i class="fab fa-linkedin"></i></a></li>
+            <li class="list-inline-item"><a href="https://twitter.com/DexterAtHeart" target="_blank" rel="noopener" aria-label="Rebecca Tracey-Timoney Twitter Account"><i class="fab fa-twitter"></i></a></li>
+        </ul> -->
 
-        <!-- first section - landing -->
-        <section id="landing-sec">
-            <div id="landing-title">
+
+        <!-- first section - home -->
+        <section id="home-sec">
+            <div id="home-title">
                 <h1>Hey there, I'm Rebecca</h1>
             </div>
 
