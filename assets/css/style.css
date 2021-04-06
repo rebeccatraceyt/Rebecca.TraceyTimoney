@@ -5,12 +5,13 @@
 
 :root {
     /* Colour Variables */
-    --blue: #008097;
+    --blue: rgb(0, 128, 151);
     --purple: rgb(106, 100, 138);
     --grey-purple: #797B94;
     --nav-bg: rgba(106, 101, 139, 0.863);
     --cream: #A5BCBB;
     --navy: #061225;
+    --line: rgba(0, 128, 151, 0.788);
 
     /* Font variables */ 
     --header-font: 'Homemade Apple', cursive;
@@ -44,6 +45,13 @@ h1 {
 }
 ol, ul {
     list-style: none;
+}
+
+hr {
+    border: 1px solid var(--line);
+    text-align: center;
+    width: 70%;
+    margin: 25px auto;
 }
 
 /*------------------------------------------------------- Navbar */
@@ -218,6 +226,42 @@ header {
 #contact-sec {
     width: 100vw;
     height: 100vh;
+    padding: 10px 20px 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#contact-sec div{
+    text-align: center;
+}
+#contact-sec h3 {
+    padding-bottom: 10px;
+}
+#contact-sec p {
+    padding-left: 5%;
+}
+#contact-sec button {
+    /* "Get in touch" Button styling */
+    background-color: var(--cream);
+    color: var(--navy);
+    font-size: 1.2em;
+}
+#contact-sec button:hover {
+    background-color: var(--colour2);
+    color: var(--accent);
+    border: 1px solid var(--colour1);
+}
+
+/* Copied and edited from W3Schools example to style contact form */
+input[type=text], input[type=email], textarea {
+    width: 90%;
+    padding: 7px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: none;
 }
 
 /*------------------------------------------------------- Media Queries */
