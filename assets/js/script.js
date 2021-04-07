@@ -6,10 +6,8 @@ $(window).on("load", function () {
     if ($(this).hasClass("animate")) {
         $("#nav-menu ul li").css("display", "block");
       $("#nav-menu").addClass("animate");
-      console.log("SOMETHING");
     } else {
       $("#nav-menu").removeClass("animate");
-      console.log("SOMETHING ELSE");
     }
   });
 
@@ -19,7 +17,6 @@ $(window).on("load", function () {
     $("#nav-menu").removeClass("animate");
     $("#nav-menu a.active").removeClass("active");
     $(this).addClass("active");
-    console.log("SOMETHING SOMETHING ELSE");
   });
 
   $(window).scroll(function () {

@@ -53,8 +53,10 @@
         
             <!-- first section - home -->
             <section id="home-sec">
-                <div>
-                    <h1 data-aos="fade-up">Hey there, I'm Rebecca</h1>
+                <div class="container">
+                    <div>
+                        <h1 data-aos="fade-up">Hey there, I'm Rebecca</h1>
+                    </div>
                 </div>
             </section>
 
@@ -62,8 +64,8 @@
             <section id="about-sec"></section>
 
             <!-- third section - project -->
-            <section id="project-sec">
-                <div class="container">
+            <section>
+                <div id="project-sec" class="container">
                     <div class="row">
                         <div class="col-12">
                             <h1 data-aos="fade-up">Previous Work</h1>
@@ -74,20 +76,20 @@
                         <div class="col-md-6 project-img" data-aos="zoom-in">
                              <a href="https://rebeccatraceyt.github.io/WhatTheBlank/" target="_blank" aria-label="Link to Blank! game page">
                                 <img src="assets/images/blank-res.png" alt="Blank! Game" class="image">
-                                
-                            </a>
-                            <div class="overlay">
+                                 <div class="overlay">
                                     <div class="text">Blank!</div>
                                 </div> 
+                            </a>
+                           
                         </div>
                         <div class="col-md-6 project-img" data-aos="zoom-in">
                             <a href="https://rebeccatraceyt.github.io/KryanLive/" target="_blank" aria-label="Link to Blank! game page">
                                 <img src="assets/images/kryan-res.png" alt="Kryan Live" class="image">
-                                
+                                <div class="overlay">
+                                    <div class="text">Kryan</div>
+                                </div>
                             </a>
-                            <div class="overlay">
-                                <div class="text">Kryan</div>
-                            </div> -
+                            
                         </div>
                     </div>
                 </div>
@@ -95,12 +97,12 @@
 
             <!-- fourth section - contact -->
             <section id="contact-sec">
-                <div data-aos="fade-up">
+                <div class="container" data-aos="fade-up">
                     <h1>Get in touch</h1>
                     <hr class="title-hr">
                     <h4>Want To Collaborate?</h4>
                     <p>Send me a message and lets get started!</p>
-                    <form aria-label="Contact Form" onsubmit="alert('Cheers! I will be in touch with you soon.')">
+                    <form data-aos="zoom-in" aria-label="Contact Form" onsubmit="alert('Cheers! I will be in touch with you soon.')">
                         <input type="text" placeholder="Name" aria-label="Enter Name" required>
                         <input type="email" placeholder="Email" aria-label="Enter Email" required>
                         <textarea placeholder="Leave a message" aria-label="Enter Message" required></textarea>

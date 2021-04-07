@@ -58,7 +58,7 @@ section {
 }
 h1 {
     font-family: var(--header-font);
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: var(--navy);
     text-align: center;
 }
@@ -76,7 +76,7 @@ ol, ul {
 /*------------------------------------------------------- Navbar */
 .logo img {
     float: left;
-    width: 50%;
+    width: 30%;
     height: auto;
 }
 /* menu button */
@@ -222,11 +222,14 @@ ol, ul {
 
 /*------------------------------------------------------- Projects Section */
 /* sourced and edited from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_overlay_fade */
+#project-sec {
+    height: 80vh;
+}
 .project-imgs {
     margin: 0;
 }
 .project-img {
-    padding: 20px 0;
+    padding: 15px 0;
 }
 .project-img a {
     margin: 0;
