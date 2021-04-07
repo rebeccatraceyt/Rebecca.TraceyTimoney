@@ -26,8 +26,10 @@
 }
 html {
     scroll-behavior: smooth;
+    scroll-snap-type: mandatory;
+    scroll-snap-points-y: repeat(100vh);
     scroll-snap-type: y mandatory;
-    line-height: 1.2;
+
 }
 body {
     font-family: var(--main-font);
@@ -46,7 +48,8 @@ header {
     z-index: 100;
 }
 section {
-    width: 100vw;
+    min-width: 100vw;
+    max-width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -158,6 +161,9 @@ ol, ul {
     display: table-cell;
     vertical-align: middle;
 }
+#nav-menu ul li {
+    display: none;
+}
 #nav-menu li {
     padding: 8px 0;
     transition: all 400ms 510ms;
@@ -208,7 +214,7 @@ ol, ul {
 }
 
 /*------------------------------------------------------- home Section */
-#home-title {
+#home-sec div {
     text-align: center;
 }
 
@@ -223,6 +229,8 @@ ol, ul {
     padding: 20px 0;
 }
 .project-img a {
+    margin: 0;
+    width: 100%;
     position: relative;
     display: flex;
     justify-content: center;
@@ -230,7 +238,7 @@ ol, ul {
 }
 .image {
   display: block;
-  width: 90%;
+  width: 100%;
   height: auto;
   border-radius: 5%;
 }
