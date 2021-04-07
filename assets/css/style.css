@@ -26,6 +26,7 @@
 }
 html {
     scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
     line-height: 1.2;
 }
 body {
@@ -39,16 +40,30 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+header {
+    position: fixed;
+    padding: 5px;
+    z-index: 100;
+}
+section {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+}
 h1 {
     font-family: var(--header-font);
     font-size: 2.5rem;
     color: var(--navy);
+    text-align: center;
 }
 ol, ul {
     list-style: none;
 }
 
-hr {
+.title-hr {
     border: 1px solid var(--line);
     text-align: center;
     width: 70%;
@@ -56,12 +71,6 @@ hr {
 }
 
 /*------------------------------------------------------- Navbar */
-
-header {
-    position: fixed;
-    padding: 5px;
-    z-index: 100;
-}
 .logo img {
     float: left;
     width: 50%;
@@ -199,39 +208,58 @@ header {
 }
 
 /*------------------------------------------------------- home Section */
-#home-sec {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 #home-title {
-    max-width: 100vw;
     text-align: center;
 }
 
 /*------------------------------------------------------- About Section */
-#about-sec {
-    width: 100vw;
-    height: 100vh;
-}
 
 /*------------------------------------------------------- Projects Section */
-#project-sec {
-    width: 100vw;
-    height: 100vh;
+/* sourced and edited from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_overlay_fade */
+.project-imgs {
+    margin: 0;
 }
-
-/*------------------------------------------------------- Contact Section */
-#contact-sec {
-    width: 100vw;
-    height: 100vh;
-    padding: 10px 20px 10px 20px;
+.project-img {
+    padding: 20px 0;
+}
+.project-img a {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+.image {
+  display: block;
+  width: 90%;
+  height: auto;
+  border-radius: 5%;
+}
+.overlay {
+  position: absolute;
+  border-radius: 5%;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+.project-img:hover .overlay {
+  opacity: 1;
+}
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/*------------------------------------------------------- Contact Section */
 #contact-sec div{
     text-align: center;
 }
